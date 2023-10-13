@@ -100,6 +100,30 @@ body {
 	top: -1px;
 	z-index: 10;
 }
+
+.main-article2 {
+	--main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+	color: var(--text);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	text-align: center;
+	/* Update: */
+	top: -1px;
+	z-index: 10;
+}
+
+.main-article2 {
+    background-image: url(img/dungeon.jpg);
+    background-position: left; /* Anda dapat mengganti 'center' dengan nilai lain, seperti 'left', 'right', 'top', 'bottom', atau koordinat seperti '50% 50%' */
+    background-size: cover; /* Ini mengatur ukuran gambar agar sesuai dengan elemen */
+}
+
+
 .main-article__header {
 	text-transform: uppercase;
 	font-size: calc(var(--index) * 1.8);
@@ -108,10 +132,21 @@ body {
 	transition: var(--transition);
 	will-change: transform;
 }
+
 .main-article__subjudul {
-	color: #3f3f3f7d;
+	color: #9d822b;
 	font-style: italic;
-	font-size: calc(var(--index) * 1.0);
+	font-size: calc(var(--index) * 1);
+	letter-spacing: calc(var(--index) / 7.5);
+	transform: var(--main-article-transform);
+	transition: var(--transition);
+	will-change: transform;
+}
+
+.main-article2__subjudul {
+	color: #2f645d;
+	font-style: italic;
+	font-size: calc(var(--index) * 1);
 	letter-spacing: calc(var(--index) / 7.5);
 	transform: var(--main-article-transform);
 	transition: var(--transition);
